@@ -1,0 +1,48 @@
+# Claude Code
+alias cl='claude'
+
+# Code
+alias c='code'
+
+# Container
+alias n='nerdctl'
+
+# Navigation
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Kubernetes
+alias k='kubectl'
+alias kga='k get all'
+alias kgp='k get pods'
+alias kgd='k get deployments'
+alias kgn='k get nodes'
+alias kgs='k get service'
+alias kdp='k describe pod'
+alias kdd='k describe deployment'
+alias kds='k describe service'
+alias kdn='k describe node'
+alias kgpan='k get pods --all-namespaces'
+alias kgdan='k get deployments --all-namespaces'
+
+# docker
+alias dk='docker'
+alias dkps='docker ps | ag -v k8s'
+alias dki='dk images'
+alias dkex='dk exec'
+alias dkr='dk run'
+
+# ls
+alias ls='ls --color'
+alias ll='ls -l'
+alias la='ls -la'
+alias lr='ls -lrth'
+
+# Misc
+alias python='python3'
+
+# lazygit
+alias l='lazygit'
+
+# MacOS
+alias sed='gsed'

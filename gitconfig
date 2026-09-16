@@ -1,0 +1,49 @@
+[alias]
+  st = status
+  di = diff
+  co = checkout
+  ci = commit --verbose
+  dca = commit --amend --reset-author --verbose
+  br = branch
+  sta = stash
+  flog = log --pretty=fuller --decorate
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  blog = log origin/master... --left-right
+  ds = diff --staged
+  fixup = commit --fixup
+  squash = commit --squash
+  unstage = reset HEAD
+  rum = rebase main@{u}
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  fv = fetch --verbose --prune
+  fvt = fetch --verbose --tags --prune-tags
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[merge]
+  conflictstyle = diff3
+[pull]
+  rebase = true
+[push]
+  default = current
+[commit]
+  verbose = true
+  gpgsign = true
+[http "https://gopkg.in"]
+  followRedirects = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[include]
+  path = ~/.gitconfig.private.local
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main

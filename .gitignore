@@ -1,0 +1,30 @@
+# Local configuration files with sensitive data
+.gitconfig.local
+.gitconfig.private*
+.zprofile.local
+.zshenv.local
+.aliases.local
+.env
+.env.local
+.env.*.local
+
+# SSH and credentials
+.ssh/
+.gnupg/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
