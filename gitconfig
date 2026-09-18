@@ -1,4 +1,5 @@
 [alias]
+  aa = add --all
   st = status
   di = diff
   co = checkout

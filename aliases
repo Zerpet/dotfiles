@@ -8,6 +8,7 @@ alias c='code'
 alias n='nerdctl'
 
 # Navigation
+alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
@@ -44,5 +45,11 @@ alias python='python3'
 # lazygit
 alias l='lazygit'
 
+alias g='git'
+
 # MacOS
 alias sed='gsed'
+
+# 7zz
+# https://formulae.brew.sh/formula/sevenzip
+alias 7z='7zz'
