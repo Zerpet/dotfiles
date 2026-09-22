@@ -3,6 +3,16 @@ autoload -U select-word-style
 select-word-style bash
 set -o emacs
 
+# Homebrew {{
+if [ -d "/opt/homebrew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -d "~/.linuxbrew" ]; then
+  eval "$(~/.linuxbrew/bin/brew shellenv)"
+elif [ -d "/home/linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+# }}
+
 ## Things to do if Homebrew is present
 if [[ -n "${HOMEBREW_PREFIX}" ]]
 then
@@ -27,6 +37,16 @@ fi
 if [ -f '/usr/share/powerline/zsh/powerline.zsh' ]; then
   . /usr/share/powerline/zsh/powerline.zsh
 fi
+
+# Golang {{
+if [[ -d "${HOME}/go/bin" ]]; then
+  export PATH="${HOME}/go/bin:${PATH}"
+fi
+# }}
+
+# asdf {{
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# }}
 
 # direnv {{
 if command "direnv" &> /dev/null; then
