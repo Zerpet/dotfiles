@@ -23,6 +23,6 @@ for file in "$DOTFILES_DIR"/*; do
 		continue
 	fi
 
-	ln "$file" "$target"
+	ln -s "$file" "$target"
 	echo "Linked ${file} -> ${target}"
 done
