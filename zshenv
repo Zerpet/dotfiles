@@ -29,3 +29,5 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 # }}
 
+# Zsh Completion
+export DOTFILES="${HOME}/workspace/dotfiles"

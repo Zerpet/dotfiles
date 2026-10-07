@@ -48,6 +48,12 @@ fi
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # }}
 
+# Zsh completion {{
+if [ -f "${HOME}/.completion.zsh" ]; then
+  source "${HOME}/.completion.zsh"
+fi
+# }}
+
 # direnv {{
 if command "direnv" &> /dev/null; then
   eval "$(direnv hook zsh)"
